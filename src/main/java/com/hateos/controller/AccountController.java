@@ -18,12 +18,10 @@ import java.util.List;
 public class AccountController {
     @Autowired
     private AccountService accountService;
-    @Autowired
-    private AccountRepository accountRepository;
     @GetMapping("/fetch")
     public ResponseEntity<List<Account>> getAllAccount()
     {
-        List<Account> allaccount = accountRepository.findAll();
+        List<Account> allaccount = accountService.listall();
         allaccount.forEach(account -> {
             //Adding SelfLink
             Link selfLink = WebMvcLinkBuilder.linkTo(AccountController.class).slash("fetch").slash(account.getId()).withSelfRel();
