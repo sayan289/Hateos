@@ -17,10 +17,12 @@ import java.util.Optional;
 public class AccountServiceImpl implements  AccountService{
     @Autowired
     private AccountRepository accountRepository;
+    //Fetch all acount details
     public List<Account> listall()
     {
         return accountRepository.findAll();
     }
+    //Fetch a single account details
     public Account getSinleAccount(int id)
     {
 //        Optional<Account>byId=accountRepository.findById(id);
@@ -33,10 +35,12 @@ public class AccountServiceImpl implements  AccountService{
 //        }
          return accountRepository.findById(id).orElseThrow(()->new CustomException("Id Not present"));
     }
+    //Adding account details
     public Account addDetails(Account account)
     {
         return accountRepository.save(account);
     }
+    //Deposite amount
     public ResponseEntity<?> deposite(float amount,int id)
     {
         Optional<Account> byId=accountRepository.findById(id);
@@ -52,6 +56,7 @@ public class AccountServiceImpl implements  AccountService{
             return new ResponseEntity<>(accountRepository.save(account),HttpStatus.OK);
         }
     }
+    //withdraw amount
     public ResponseEntity<?> withdraw(float amount,int id)
     {
         Optional<Account> byId=accountRepository.findById(id);
@@ -59,6 +64,7 @@ public class AccountServiceImpl implements  AccountService{
         {
             return new ResponseEntity<>("Invalid Id",HttpStatus.NOT_FOUND);
         }
+        //if amount is low than balance show Low balance
         else {
             Account account=byId.get();
             if(amount>account.getBalance())
@@ -73,6 +79,7 @@ public class AccountServiceImpl implements  AccountService{
             }
         }
     }
+    //Delete account
     public ResponseEntity<?> deleteAccount(int id)
     {
         Optional<Account>byId=accountRepository.findById(id);
