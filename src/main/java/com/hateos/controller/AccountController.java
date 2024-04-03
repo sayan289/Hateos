@@ -43,19 +43,19 @@ public class AccountController {
     @PostMapping("/add")
     public ResponseEntity<?> add(@RequestBody Account account)
     {
-        accountService.addDetails(account);
-        Link selfLink = linkTo(AccountController.class).slash("fetch").slash(account.getId()).withSelfRel();
+        Account addAccount = accountService.addDetails(account);
+        Link selfLink = linkTo(AccountController.class).slash("fetch").slash(addAccount.getId()).withSelfRel();
         account.add(selfLink);
         //Adding Deposite
-        Link depositLink = linkTo(methodOn(AccountController.class).deposite(0,account.getId())).withRel("deposit [amount must be in params]");
+        Link depositLink = linkTo(methodOn(AccountController.class).deposite(0,addAccount.getId())).withRel("deposit [amount must be in params]");
         depositLink=depositLink.withHref(depositLink.getHref() + "?amount={amount}");
         account.add(depositLink);
         //Adding Withdraw link
-        Link withdrawLink = linkTo(methodOn(AccountController.class).withdraw(0, account.getId())).withRel("withdraw [amount must be in params]");
+        Link withdrawLink = linkTo(methodOn(AccountController.class).withdraw(0, addAccount.getId())).withRel("withdraw [amount must be in params]");
         withdrawLink=withdrawLink.withHref(withdrawLink.getHref() + "?amount={amount}");
         account.add(withdrawLink);
         //Add delete
-        Link deleteLink=linkTo(methodOn(AccountController.class).deleteAccount(account.getId())).withRel("Deleted");
+        Link deleteLink=linkTo(methodOn(AccountController.class).deleteAccount(addAccount.getId())).withRel("Deleted");
         account.add(deleteLink);
         return ResponseEntity.ok(account);
     }
