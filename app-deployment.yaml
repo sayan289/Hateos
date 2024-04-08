@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: springboot-k8s-mysql
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -18,16 +18,16 @@ spec:
           ports:
             - containerPort: 8080
           env:   # Setting Enviornmental Variables
-            - name: MYSQL_HOST   # Setting Database host address from configMap
-              value: mysql-service
+            - name: MYSQL_HOST   # Setting Database host address from mysql-deployment.yaml
+              value: mysql
 
-            - name: MYSQL_DBNAME  # Setting Database name from configMap
+            - name: MYSQL_DBNAME  # Setting Database name
               value: trial
 
-            - name: MYSQL_USERNAME  # Setting Database username from Secret
+            - name: MYSQL_USERNAME  # Setting Database username
               value: root
 
-            - name: MYSQL_PASSWORD # Setting Database password from Secret
+            - name: MYSQL_PASSWORD # Setting Database password
               value: root
 
 ---

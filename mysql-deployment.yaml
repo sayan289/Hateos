@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql-service
+  name: mysql
   labels:
-    app: mysql-service
+    app: mysql
     tier: database
 spec:
   selector:
     matchLabels:
-      app: mysql-service
+      app: mysql
       tier: database
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: mysql-service
+        app: mysql
         tier: database
     spec:
       containers:
         - image: mysql:latest
-          name: mysql-service
+          name: mysql
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
@@ -34,7 +34,7 @@ spec:
                   key: dbName
           ports:
             - containerPort: 3306
-              name: mysql-service
+              name: mysql
           volumeMounts:
             - name: mysql-persistent-storage
               mountPath: /var/lib/mysql
@@ -46,15 +46,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-service
+  name: mysql
   labels:
-    app: mysql-service
+    app: mysql
     tier: database
 spec:
   ports:
     - port: 3306
       targetPort: 3306
   selector:
-    app: mysql-service
+    app: mysql
     tier: database
   clusterIP: None
