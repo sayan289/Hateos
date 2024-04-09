@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot-crud-k8s
-          image: sayanadhikary/springboot-app:4.0
+          image: sayanadhikary/springboot-app:4.0 #Mention the Dockerhub image name
           ports:
             - containerPort: 8080
           env:   # Setting Enviornmental Variables
