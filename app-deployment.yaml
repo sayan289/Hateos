@@ -19,7 +19,7 @@ spec:
             - containerPort: 8080
           env:   # Setting Enviornmental Variables
             - name: MYSQL_HOST   # Setting Database host address from mysql-deployment.yaml
-              value: mysql
+              value: mysql # This container connect to mysql by this name.
 
             - name: MYSQL_DBNAME  # Setting Database name
               value: trial
