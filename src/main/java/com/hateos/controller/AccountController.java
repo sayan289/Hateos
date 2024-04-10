@@ -96,6 +96,6 @@ public class AccountController {
     @GetMapping("/test")
     public String test()
     {
-        return "Fixed port 1,2,3";
+        return "Fixed port ";
     }
 }
