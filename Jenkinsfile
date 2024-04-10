@@ -36,7 +36,7 @@ pipeline {
         stage('deploy k8s'){
             steps{
                 script{
-                    kubeconfig(caCertificate: '', credentialsId: 'mykubeconfig', serverUrl: 'https://192.168.49.2:8443'){
+                    kubeconfig(credentialsId: 'mykubeconfig', serverUrl: 'https://192.168.49.2:8443'){
                         sh 'kubectl delete service/springboot-crud-svc --ignore-not-found=true'
                         sh 'kubectl delete deployment.apps/springboot-crud-deployment --ignore-not-found=true'
                         sh 'kubectl apply -f mysql-secret.yaml'
