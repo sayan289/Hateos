@@ -93,7 +93,7 @@ public class AccountController {
     {
         return accountService.deleteAccount(id);
     }
-    @GetMapping
+    @GetMapping("/test")
     public String test()
     {
         return "This is test";
