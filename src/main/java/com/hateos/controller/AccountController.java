@@ -96,6 +96,6 @@ public class AccountController {
     @GetMapping("/test")
     public String test()
     {
-        return "Hello world!!";
+        return "Welcome from jenkins";
     }
 }
