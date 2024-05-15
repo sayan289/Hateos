@@ -1,0 +1,69 @@
+[2024-05-13 T 15:04:00] [INFO] com.hateos.HateosApplication [restartedMain]: Starting HateosApplication using Java 17.0.10 with PID 12224 (/home/cbnits-51/Desktop/sayan/springboot/hateos/target/classes started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-13 T 15:04:00] [INFO] com.hateos.HateosApplication [restartedMain]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-13 T 15:04:03] [INFO] com.hateos.HateosApplication [restartedMain]: Started HateosApplication in 3.661 seconds (process running for 4.443)
+[2024-05-13 T 15:05:06] [INFO] com.hateos.controller.AccountController [http-nio-8081-exec-2]: Hello
+[2024-05-13 T 15:12:36] [INFO] com.hateos.HateosApplication [restartedMain]: Starting HateosApplication using Java 17.0.10 with PID 13013 (/home/cbnits-51/Desktop/sayan/springboot/hateos/target/classes started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-13 T 15:12:36] [INFO] com.hateos.HateosApplication [restartedMain]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-13 T 15:12:39] [INFO] com.hateos.HateosApplication [restartedMain]: Started HateosApplication in 3.539 seconds (process running for 4.309)
+[2024-05-13 T 17:46:02] [INFO] com.hateos.HateosApplication [restartedMain]: Starting HateosApplication using Java 17.0.10 with PID 19887 (/home/cbnits-51/Desktop/sayan/springboot/hateos/target/classes started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-13 T 17:46:02] [INFO] com.hateos.HateosApplication [restartedMain]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-13 T 17:46:05] [INFO] com.hateos.HateosApplication [restartedMain]: Started HateosApplication in 3.378 seconds (process running for 4.171)
+[2024-05-14 T 12:51:08] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 18255 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 12:51:08] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:11:28] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 19334 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:11:28] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:11:33] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.981 seconds (process running for 7.852)
+[2024-05-14 T 13:12:29] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 19482 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:12:29] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:12:34] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.678 seconds (process running for 7.438)
+[2024-05-14 T 13:14:21] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 19667 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:14:21] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:14:26] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.573 seconds (process running for 7.374)
+[2024-05-14 T 13:15:19] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 19807 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:15:19] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:15:24] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.681 seconds (process running for 7.437)
+[2024-05-14 T 13:16:26] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 19937 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:16:26] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:16:31] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.629 seconds (process running for 7.482)
+[2024-05-14 T 13:19:05] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 20173 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:19:05] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:19:10] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.51 seconds (process running for 7.222)
+[2024-05-14 T 13:21:18] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 20333 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:21:18] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:21:23] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.684 seconds (process running for 7.471)
+[2024-05-14 T 13:22:04] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 20455 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:22:04] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:22:09] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.686 seconds (process running for 7.704)
+[2024-05-14 T 13:22:42] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 20577 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:22:42] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:22:48] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.997 seconds (process running for 7.932)
+[2024-05-14 T 13:23:11] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 20709 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:23:11] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:23:16] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 6.122 seconds (process running for 8.012)
+[2024-05-14 T 13:25:18] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 20896 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:25:18] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:25:25] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 6.904 seconds (process running for 9.057)
+[2024-05-14 T 13:29:23] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 21211 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:29:23] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:29:28] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 5.992 seconds (process running for 8.065)
+[2024-05-14 T 13:29:56] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 21301 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:29:56] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:30:02] [INFO] com.hateos.HateosApplicationTests [main]: Started HateosApplicationTests in 6.159 seconds (process running for 8.041)
+[2024-05-14 T 13:40:37] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 22026 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:40:37] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 13:45:03] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 22377 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 13:45:03] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 14:00:35] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 23681 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 14:00:35] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 14:01:21] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 23803 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 14:01:21] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 14:04:06] [INFO] com.hateos.HateosApplicationTests [main]: Starting HateosApplicationTests using Java 17.0.10 with PID 24052 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 14:04:06] [INFO] com.hateos.HateosApplicationTests [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 14:08:01] [INFO] com.hateos.Controller.ControllerTest [main]: Starting ControllerTest using Java 17.0.10 with PID 24388 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 14:08:01] [INFO] com.hateos.Controller.ControllerTest [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 14:10:43] [INFO] com.hateos.Controller.ControllerTest [main]: Starting ControllerTest using Java 17.0.10 with PID 24609 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 14:10:43] [INFO] com.hateos.Controller.ControllerTest [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 14:14:03] [INFO] com.hateos.Controller.ControllerTest [main]: Starting ControllerTest using Java 17.0.10 with PID 24906 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 14:14:03] [INFO] com.hateos.Controller.ControllerTest [main]: No active profile set, falling back to 1 default profile: "default"
+[2024-05-14 T 14:23:55] [INFO] com.hateos.Controller.ControllerTest [main]: Starting ControllerTest using Java 17.0.10 with PID 25543 (started by cbnits-51 in /home/cbnits-51/Desktop/sayan/springboot/hateos)
+[2024-05-14 T 14:23:55] [INFO] com.hateos.Controller.ControllerTest [main]: No active profile set, falling back to 1 default profile: "default"

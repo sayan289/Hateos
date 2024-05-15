@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">%d{[yyyy-MM-dd 'T' HH:mm:ss]} [%p] %logger [%thread]: %m%n</Property>
+        <Property name="APP_LOG_ROOT">log</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+        </Console>
+
+        <RollingFile name="appLog"
+                     fileName="${APP_LOG_ROOT}/application.log"
+                     filePattern="${APP_LOG_ROOT}/application-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="19500KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="1" />
+        </RollingFile>
+
+        <!-- New appender to capture console logs -->
+        <Console name="ConsoleToFile" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.hateos" level="INFO" additivity="false">
+            <AppenderRef ref="appLog" />
+            <AppenderRef ref="Console" />
+            <!-- Add the new appender to capture console logs to the log file -->
+            <AppenderRef ref="ConsoleToFile" />
+        </Logger>
+
+        <Root level="INFO">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>
+

@@ -3,6 +3,7 @@ package com.hateos.controller;
 import com.hateos.Repository.AccountRepository;
 import com.hateos.entity.Account;
 import com.hateos.service.AccountService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.hateoas.Link;
@@ -15,12 +16,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/account")
+@Slf4j
 public class AccountController {
     @Autowired
     private AccountService accountService;
     @GetMapping("/fetch")
     public ResponseEntity<List<Account>> getAllAccount()
     {
+        log.info("Hello");
         List<Account> allaccount = accountService.listall();
         allaccount.forEach(account -> {
             //Adding SelfLink
