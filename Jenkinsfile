@@ -16,16 +16,6 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Junit'){
-                    steps{
-                        sh './mvnw test'
-                    }
-                    post{
-                        always{
-                            junit '**/target/surefire-reports/TEST-*.xml'
-                        }
-                    }
-        }
         stage('Push Image to Docker Hub') {
             steps {
                 script {
