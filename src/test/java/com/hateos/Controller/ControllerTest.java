@@ -52,4 +52,16 @@ public class ControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk());
 
     }
+    @Test
+    public void testGetSingleAccounts() throws Exception {
+        when(accountService.getSinleAccount(10))
+                .thenReturn(account);
+        ResultActions perform = mockMvc.perform(get("/account/fetch/10")
+                .contentType(MediaType.APPLICATION_JSON));
+        perform.andDo(print())
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1));
+
+    }
+
 }
