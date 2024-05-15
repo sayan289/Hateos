@@ -26,14 +26,6 @@ pipeline {
                         }
                     }
         }
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    // Build the Docker image
-                    sh 'docker build -t sayanadhikary/springboot-app .'
-                }
-            }
-        }
         stage('Push Image to Docker Hub') {
             steps {
                 script {
