@@ -60,7 +60,7 @@ public class ControllerTest {
                 .contentType(MediaType.APPLICATION_JSON));
         perform.andDo(print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(10));
 
     }
 
