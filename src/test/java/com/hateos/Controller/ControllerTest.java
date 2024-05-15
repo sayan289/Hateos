@@ -3,6 +3,7 @@ import com.hateos.controller.AccountController;
 import com.hateos.entity.Account;
 import com.hateos.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.platform.commons.logging.Logger;
@@ -10,70 +11,45 @@ import org.junit.platform.commons.logging.LoggerFactory;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @ExtendWith(MockitoExtension.class)
-@Slf4j
+@WebMvcTest(AccountController.class)
 public class ControllerTest {
-    @Mock
+    @MockBean
     private AccountService accountService;
-    @InjectMocks
-    private AccountController accountController;
-    @Test
-    public void testGetAllAccount() {
-        // Create a list of mock accounts
-        // Create a list of mock accounts
-        List<Account> mockAccounts = new ArrayList<>();
-        mockAccounts.add(new Account(1, "12345688", 10000));
-        mockAccounts.add(new Account(2,"abc123",1000));
-        // Mock behavior of accountService.listall() to return the list of mock accounts
-        when(accountService.listall()).thenReturn(mockAccounts);
+    @Autowired
+    private MockMvc mockMvc;
+    private Account account;
 
-        // Call the controller method
-        ResponseEntity<List<Account>> responseEntity = accountController.getAllAccount();
-
-        // Assert the response status
-        assert responseEntity.getStatusCode() == HttpStatus.OK;
-
-        // Assert that the response contains the expected accounts
-        List<Account> returnedAccounts = responseEntity.getBody();
-        assert returnedAccounts != null;
-        assert returnedAccounts.size() == mockAccounts.size();
-        for (int i = 0; i < returnedAccounts.size(); i++) {
-            Account returnedAccount = returnedAccounts.get(i);
-            Account mockAccount = mockAccounts.get(i);
-            assert returnedAccount.getId() == mockAccount.getId();
-            assert returnedAccount.getAccountNumber().equals(mockAccount.getAccountNumber());
-            assert returnedAccount.getBalance() == mockAccount.getBalance();
-        }
+    @BeforeEach
+    void setUp() {
+        account=new Account(10,"huihds-90809-jjj",678);
     }
+
     @Test
-    public void testGetSingleAccount()
-    {
-        Account mockAccount = new Account(1, "John Doe", 1000);
-
-        // Mock behavior of accountService.getSinleAccount(id) to return the mock account
-        when(accountService.getSinleAccount(anyInt())).thenReturn(mockAccount);
-
-        // Call the controller method with a sample ID
-        int sampleId = 1;
-        ResponseEntity<?> responseEntity = accountController.getsingleaccount(sampleId);
-
-        // Assert that the response body is not null
-        assert responseEntity.getBody() != null;
-
-        // Assert that the returned account matches the mock account
-        Account returnedAccount = (Account) responseEntity.getBody();
-        assert returnedAccount.getId() == mockAccount.getId();
-        assert returnedAccount.getAccountNumber().equals(mockAccount.getAccountNumber());
-        assert returnedAccount.getBalance() == mockAccount.getBalance();
+    public void testGetSingleAccount() throws Exception {
+        when(accountService.getSinleAccount(10))
+                .thenReturn(account);
+        ResultActions perform = mockMvc.perform(get("/account/fetch/10")
+                .contentType(MediaType.APPLICATION_JSON));
+        perform.andDo(print())
+                .andExpect(MockMvcResultMatchers.status().isOk());
 
     }
 }
