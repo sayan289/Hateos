@@ -16,16 +16,6 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Junit'){
-            steps{
-                sh './mvnw test'
-            }
-            post{
-                always{
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                }
-            }
-        }
         stage('Build docker image') {
             steps {
                 script {
@@ -40,6 +30,21 @@ pipeline {
                         sh 'docker login -u sayanadhikary -p ${dockerhubpwd}'
                     }
                     sh 'docker push sayanadhikary/springboot-app'
+                }
+            }
+        }
+        stage('deploy k8s'){
+            steps{
+                script{
+                    kubeconfig(credentialsId: 'mykubeconfig', serverUrl: 'https://192.168.49.2:8443'){
+                        sh 'kubectl delete service/springboot-crud-svc --ignore-not-found=true'
+                        sh 'kubectl delete deployment.apps/springboot-crud-deployment --ignore-not-found=true'
+                        sh 'kubectl apply -f mysql-secret.yaml'
+                        sh 'kubectl apply -f mysql-storage.yaml'
+                        sh 'kubectl apply -f mysql-deployment.yaml'
+                        sh 'kubectl apply -f app-deployment.yaml'
+                        sh 'kubectl get pods'
+                    }
                 }
             }
         }
