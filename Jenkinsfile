@@ -24,7 +24,7 @@ pipeline {
                         sh 'docker login -u sayanadhikary -p ${dockerhubpwd}'
                     }
                     // Push the Docker image
-                    sh 'docker push sayanadhikary/springboot-app:5.0'
+                    sh 'docker push sayanadhikary/springboot-app'
                 }
             }
         }
